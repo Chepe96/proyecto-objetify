@@ -1,33 +1,23 @@
+import java.util.ArrayList;
 
-/**
- * Write a description of class Biblioteca here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Biblioteca
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Biblioteca
-     */
+    private ArrayList<String>canciones;
+    private Reproductor reproductor;
+    
     public Biblioteca()
     {
-        // initialise instance variables
-        x = 0;
+        canciones = new ArrayList<String>();
+        reproductor=new Reproductor();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public void agregarCancion(String nombreArchivo)
     {
-        // put your code here
-        return x + y;
+        canciones.add(nombreArchivo);
+    }
+    
+    public void reproducirCancion(int numCancion)
+    {
+        reproductor.reproducir(canciones.get(numCancion));
     }
 }
