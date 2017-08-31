@@ -12,6 +12,10 @@ public class Biblioteca
         reproductor=new Reproductor();
     }
     
+    /**
+     * Este metodo agrega una nueva cancion a la biblioteca.
+     * @param unArchivo Este parametro me permite agregar un objeto directamente.
+     */
     public void agregarCancion(/*String nombreArchivo*/Archivo unArchivo)
     {
         canciones.add(unArchivo);
